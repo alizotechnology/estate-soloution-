@@ -1,0 +1,848 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "on-tertiary-fixed": "#181c24", "on-primary": "#ffffff", "luxe-gold-light": "#DFBA73", "tertiary": "#000000", "inverse-on-surface": "#f0f1f2", "on-error-container": "#93000a", "surface": "#f8f9fa", "surface-bright": "#f8f9fa", "tertiary-fixed": "#dfe2ee", "on-secondary-fixed-variant": "#5d4201", "slate-black": "#0B0F17", "primary-container": "#141b2b", "primary-fixed": "#dce2f7", "primary": "#000000", "dark-surface": "#161F30", "on-background": "#191c1d", "secondary-fixed-dim": "#e9c176", "on-primary-fixed": "#141b2b", "secondary-fixed": "#ffdea5", "outline": "#76777d", "background": "#f8f9fa", "on-surface-variant": "#45464c", "surface-container-low": "#f3f4f5", "inverse-surface": "#2e3132", "tertiary-container": "#181c24", "on-primary-fixed-variant": "#404758", "ivory-base": "#FCFCFD", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#434750", "on-secondary": "#ffffff", "charcoal-border": "#E5E7EB", "on-secondary-container": "#785a1a", "on-surface": "#191c1d", "tertiary-fixed-dim": "#c3c6d2", "surface-dim": "#d9dadb", "surface-tint": "#575e70", "inverse-primary": "#c0c6db", "secondary-container": "#fed488", "surface-variant": "#e1e3e4", "surface-container-high": "#e7e8e9", "outline-variant": "#c6c6cd", "on-primary-container": "#7d8497", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-container": "#edeeef", "on-secondary-fixed": "#261900", "on-tertiary-container": "#80848e", "dark-border": "#283548", "primary-fixed-dim": "#c0c6db", "surface-container-highest": "#e1e3e4", "on-tertiary": "#ffffff", "secondary": "#775a19", "luxe-gold-deep": "#9E7B35" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "display-xl": ["Playfair Display"], "display-xl-mobile": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "headline-lg": ["Playfair Display"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-xl-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script>
+<style>
+@keyframes logoGlow {
+  0% { box-shadow: 0 0 5px rgba(223, 186, 115, 0.3), 0 0 1px rgba(0,0,0,0.1); }
+  50% { box-shadow: 0 0 18px rgba(223, 186, 115, 0.8), 0 0 8px rgba(197, 160, 89, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(223, 186, 115, 0.3), 0 0 1px rgba(0,0,0,0.1); }
+}
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+.animated-logo {
+  animation: logoGlow 3.5s infinite ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+.animated-logo:hover {
+  transform: scale(1.06) rotate(-1deg);
+  filter: brightness(1.1);
+}
+.pulse-online {
+  animation: pulseBadge 2s infinite ease-in-out;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)] border-b border-charcoal-border/50">
+  <div class="h-20 w-full max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+    <!-- Brand Logo & Name -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="relative overflow-hidden rounded-lg p-0.5 bg-gradient-to-br from-luxe-gold-light via-secondary to-luxe-gold-deep shadow-md">
+        <img src="/assets/images/logo.jpg" alt="Estate Solutions Logo" class="h-11 w-11 object-cover rounded-md animated-logo">
+      </div>
+      <div class="flex flex-col">
+        <span class="font-display-xl text-lg lg:text-xl font-bold tracking-tight uppercase text-on-surface group-hover:text-secondary transition-colors">Estate Solutions</span>
+        <span class="font-label-sm text-[10px] tracking-wider text-secondary uppercase font-semibold flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block pulse-online"></span>
+          DHA Bahawalpur • Lead: Rasheed Baig
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden xl:flex items-center gap-space-md lg:gap-space-lg">
+      <a href="/" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">Home</a>
+      <a href="/projects" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface font-semibold underline decoration-secondary decoration-2 underline-offset-8">Projects</a>
+      <a href="/buy-sell" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">Buy & Sell</a>
+      <a href="/gallery" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">Gallery</a>
+      <a href="/about" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">About Us</a>
+      <a href="/services" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">Services</a>
+      <a href="/faq" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">FAQ</a>
+      <a href="/contact" class="font-label-lg text-label-lg transition-colors uppercase text-on-surface-variant hover:text-on-surface">Contact</a>
+    </nav>
+
+    <!-- Header Actions & Phone CTAs -->
+    <div class="flex items-center gap-space-sm md:gap-space-md">
+      <div class="hidden sm:flex items-center gap-space-xs">
+        <a href="tel:03458530848" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-all border border-charcoal-border/40 text-xs font-semibold">
+          <i class="fa-solid fa-phone text-secondary text-xs"></i>
+          <span>0345-8530848</span>
+        </a>
+        <a href="tel:03053001401" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-all border border-charcoal-border/40 text-xs font-semibold">
+          <i class="fa-solid fa-phone text-secondary text-xs"></i>
+          <span>0305-3001401</span>
+        </a>
+      </div>
+
+      <a href="https://wa.me/923458530848?text=Hello%20Estate%20Solutions,%20I%20am%20interested%20in%20DHA%20Bahawalpur%20properties" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-label-md text-xs uppercase tracking-wider transition-all shadow-sm">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 rounded-md text-on-surface hover:bg-surface-container transition-colors">
+        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-drawer" class="hidden fixed inset-x-0 top-20 bg-slate-black/95 backdrop-blur-xl border-b border-dark-border text-ivory-base px-6 py-6 transition-all duration-300 flex-col gap-4 shadow-2xl z-50">
+    <div class="flex flex-col gap-3 font-label-lg text-sm uppercase tracking-wider">
+      <a href="/" class="py-2 border-b border-dark-border/50 text-luxe-gold-light hover:text-white flex items-center justify-between">Home <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/projects" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Projects Showcase <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/buy-sell" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Buy & Sell Portal <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/gallery" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Visual Gallery <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/about" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">About Executive Advisory <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/services" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Our Services <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/faq" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Investor FAQ <i class="fa-solid fa-chevron-right text-xs"></i></a>
+      <a href="/contact" class="py-2 border-b border-dark-border/50 text-ivory-base hover:text-luxe-gold-light flex items-center justify-between">Contact Us <i class="fa-solid fa-chevron-right text-xs"></i></a>
+    </div>
+
+    <div class="pt-4 flex flex-col gap-3">
+      <div class="text-xs uppercase text-outline-variant tracking-widest font-semibold">Direct Mobile Hotline</div>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="tel:03458530848" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-dark-surface border border-dark-border rounded text-xs font-semibold text-white">
+          <i class="fa-solid fa-phone text-luxe-gold-light"></i> 0345-8530848
+        </a>
+        <a href="tel:03053001401" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-dark-surface border border-dark-border rounded text-xs font-semibold text-white">
+          <i class="fa-solid fa-phone text-luxe-gold-light"></i> 0305-3001401
+        </a>
+      </div>
+      <a href="https://wa.me/923458530848?text=Hello%20Estate%20Solutions,%20I%20am%20interested%20in%20DHA%20Bahawalpur%20properties" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-bold uppercase tracking-wider">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp Inquiry
+      </a>
+    </div>
+  </div>
+</header>
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Utility Context Bar / Breadcrumbs -->
+<section class="w-full bg-surface-container-low border-b border-charcoal-border/40 py-space-sm">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex flex-wrap items-center justify-between gap-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span> Home
+        </a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Projects</a>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">Defence Gardenia Luxury Villas</span>
+</nav>
+<div class="flex items-center gap-space-md">
+<a class="group inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded shadow-sm hover:bg-surface-container-high transition-all" href="/defence-gardenia-villas" rel="noopener noreferrer" target="_blank">
+<img alt="Defence Gardenia Logo" class="h-4 w-auto object-contain" src="/assets/images/logo.jpg">
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-secondary uppercase">gardenia.dhabahawalpur.com</span>
+<span class="material-symbols-outlined text-xs text-secondary group-hover:translate-x-0.5 transition-transform">north_east</span>
+</a>
+<div class="hidden sm:flex items-center gap-1.5 text-luxe-gold-deep font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="">DHA Sector D Official Authorized</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Presentation Section -->
+<section class="relative w-full bg-slate-black text-ivory-base overflow-hidden py-space-xl lg:py-space-2xl">
+<div class="absolute inset-0 bg-gradient-to-r from-slate-black via-slate-black/90 to-transparent z-10 pointer-events-none"></div>
+<div class="absolute inset-y-0 right-0 w-full lg:w-3/5 opacity-40 lg:opacity-85 mix-blend-luminosity overflow-hidden">
+<img alt="Defence Gardenia 6 Marla Luxury Villa Front Elevation" class="w-full h-full object-cover object-center transform scale-105 hover:scale-100 transition-transform duration-1000" src="/assets/images/logo.jpg">
+</div>
+<div class="relative z-20 max-w-[1400px] mx-auto px-margin-mobile lg:px-margin">
+<div class="max-w-2xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-sm self-start px-space-sm py-1 rounded bg-dark-surface/90 text-luxe-gold-light">
+<img alt="Emblem" class="w-4 h-4 object-contain brightness-125" src="/assets/images/logo.jpg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Flagship Masterpiece — Sector D, DHA Bahawalpur</span>
+</div>
+<h1 class="font-display-xl text-display-xl tracking-tight text-ivory-base font-semibold leading-tight">
+          Defence Gardenia <br>
+<span class="font-headline-lg italic font-normal text-luxe-gold-light">6 Marla Luxury Villas</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant font-light leading-relaxed">
+          A bespoke residential enclave defined by 78% courtyard and park-facing serene vistas. Engineered upon the visionary Radburn urban philosophy, isolating traffic to secure uninterrupted green pedestrian living.
+        </p>
+<!-- Metric Badges Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm py-space-sm">
+<div class="bg-dark-surface/80 p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase block">Covered Space</span>
+<span class="font-title-lg text-title-lg font-bold text-ivory-base">2,171 <span class="font-label-sm text-label-sm text-outline-variant font-normal">Sq. Ft.</span></span>
+</div>
+<div class="bg-dark-surface/80 p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase block">Plot Tenure</span>
+<span class="font-title-lg text-title-lg font-bold text-ivory-base">6 Marla <span class="font-label-sm text-label-sm text-outline-variant font-normal">Standard</span></span>
+</div>
+<div class="bg-dark-surface/80 p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase block">Payment Schedule</span>
+<span class="font-title-lg text-title-lg font-bold text-ivory-base">3 Years <span class="font-label-sm text-label-sm text-outline-variant font-normal">Installments</span></span>
+</div>
+<div class="bg-dark-surface/80 p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase block">Bed Configuration</span>
+<span class="font-title-lg text-title-lg font-bold text-ivory-base">4 Suites <span class="font-label-sm text-label-sm text-outline-variant font-normal">En-Suite</span></span>
+</div>
+</div>
+<!-- Hero Actions -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-lg py-3 rounded bg-luxe-gold-light hover:bg-luxe-gold-deep text-slate-black font-label-md text-label-md uppercase tracking-wider font-bold transition-all shadow-lg flex items-center gap-space-xs" href="#payment-plan">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+            Request 3-Year Payment Schedule
+          </a>
+<a class="px-space-lg py-3 rounded bg-dark-surface hover:bg-dark-border text-ivory-base font-label-md text-label-md uppercase tracking-wider transition-all flex items-center gap-space-xs" href="#inquiry-section">
+<span class="material-symbols-outlined text-lg text-luxe-gold-light">calendar_month</span>
+            Book Private Villa Inspection
+          </a>
+</div>
+<!-- Leadership Credential -->
+<div class="flex items-center gap-space-md pt-space-sm border-t border-dark-border/60">
+<img alt="Rasheed Baig" class="w-10 h-10 rounded-full object-cover" src="/assets/images/logo.jpg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Advisory Desk</span>
+<span class="font-body-md text-body-md font-semibold text-ivory-base">Led by Rasheed Baig — Authorized DHA Consultant</span>
+</div>
+<a class="ml-auto inline-flex items-center gap-1 text-luxe-gold-light hover:underline font-label-sm text-label-sm" href="https://wa.me/923458530848" target="_blank">
+<span class="material-symbols-outlined text-base">chat</span> Instant Dossier
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Architectural & Urban Planning Masterplan (Radburn Concept) -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold block mb-1">Masterplanned Serenity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">The Radburn Pedestrian Philosophy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+            Inspired by historic British garden cities, Defence Gardenia reimagines luxury living by structurally decoupling vehicular ingress from everyday social life.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto bg-surface-container-low px-space-md py-space-sm rounded">
+<span class="material-symbols-outlined text-secondary">park</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Sector D Parkland Access: 100% Direct</span>
+</div>
+</div>
+<!-- Feature Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="p-space-lg bg-surface rounded shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">signpost</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mb-2">Rear-Lane Ingress &amp; Garaging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Vehicular thoroughfares and dedicated SUV garages are strictly positioned at the rear of each residence. Front elevations open uninterrupted into pure floral walkways free from exhaust and noise.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm border-t border-charcoal-border/50 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="">Zero-Contact Pedestrian Zones</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg bg-surface rounded shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">nature_people</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mb-2">1.8 KM Continuous Green Spine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A verdant ecological corridor winds directly from your garden porch to the Grand Jamia Mosque, sports complex, and Sector D commercial arcade without crossing any vehicular asphalt.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm border-t border-charcoal-border/50 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="">Direct Community Connectivity</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg bg-surface rounded shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">electrical_services</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mb-2">Subterranean Civil Grids</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              100% subterranean high-voltage power conduits, FTTH optical gigabit channels, pressurized water distillation loops, and discreet rainwater harvesting channels preserve clean skyline aesthetics.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm border-t border-charcoal-border/50 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="">Zero Overhead Cables</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Photographic Integration Strip -->
+<div class="w-full bg-surface-container-low rounded p-space-md lg:p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-7 overflow-hidden rounded shadow-sm">
+<img alt="Perspective of pedestrian green frontage in Defence Gardenia" class="w-full h-80 object-cover object-center hover:scale-105 transition-transform duration-700" src="/assets/images/logo.jpg">
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 text-secondary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-sm">location_city</span> Sector D Urban Density Metrics
+          </div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Designed for Tranquil Multigenerational Estates</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Unlike congested conventional layouts, Defence Gardenia guarantees front garden views across all units. Over 78% of homes border direct courtyards or community pocket parks, assuring elevated air quality and sustained capital appreciation.
+          </p>
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-title-lg text-title-lg font-bold text-on-surface block">78%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Park/Green Frontage</span>
+</div>
+<div class="w-px h-8 bg-charcoal-border"></div>
+<div>
+<span class="font-title-lg text-title-lg font-bold text-on-surface block">60 Ft</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Central Boulevards</span>
+</div>
+<div class="w-px h-8 bg-charcoal-border"></div>
+<div>
+<span class="font-title-lg text-title-lg font-bold text-on-surface block">24/7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">DHA Armed Patrol</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Villa Specifications & Floor Plan Gallery -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Architectural Specifications</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Crafted For Connoisseurs of Refined Space</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          2,171 square feet of meticulously orchestrated spatial flow across dual living levels, complete with separate service circulation and panoramic terraces.
+        </p>
+</div>
+<!-- Tabbed Spec Module -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Ground Floor Breakdown -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-xl rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-charcoal-border">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Level 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ground Floor Plan</h3>
+</div>
+<span class="font-label-md text-label-md bg-surface-container px-space-sm py-1 rounded text-on-surface font-semibold">1,215 Sq. Ft.</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Grand Double-Height Foyer:</strong> Dramatic structural welcome flooded with natural morning clerestory light.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Formal Guest Suite:</strong> 1 Large en-suite bedroom with built-in wardrobe and garden vista.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Open Concept Living &amp; Dining:</strong> Seamless entertaining area opening to an internal air-well courtyard.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Dual Culinary Workspaces:</strong> Sleek show kitchen with breakfast counter plus segregated wet kitchen / scullery.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Private Car Porch:</strong> Covered vehicular space comfortably accommodating a full-size SUV.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-md bg-surface-container-low rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-semibold">Detailed CAD Floor Plans</span>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1 font-bold" href="#inquiry-section">
+              Download Ground CAD <span class="material-symbols-outlined text-xs">download</span>
+</a>
+</div>
+</div>
+<!-- First Floor Breakdown -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-xl rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-charcoal-border">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Level 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">First Floor &amp; Rooftop</h3>
+</div>
+<span class="font-label-md text-label-md bg-surface-container px-space-sm py-1 rounded text-on-surface font-semibold">956 Sq. Ft.</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">3 Master Bed Chambers:</strong> Each fitted with private designer bathrooms and integrated Spanish closets.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Family Lounge / Reading Alcove:</strong> Intimate secondary living sanctuary bridging the bedrooms.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Sunset Promenade Balcony:</strong> Tempered glass balustrades framing panoramic park and garden perspectives.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Dedicated Laundry &amp; Storage:</strong> Concealed utility space designed for modern washer-dryer units.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class=""><strong class="text-on-surface">Rooftop Entertaining Deck:</strong> Reinforced open-air barbecue patio pre-piped for outdoor hospitality.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-md bg-surface-container-low rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-semibold">Detailed CAD Floor Plans</span>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1 font-bold" href="#inquiry-section">
+              Download First Floor CAD <span class="material-symbols-outlined text-xs">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Material Craft & Quality Benchmarks -->
+<div class="bg-dark-surface text-ivory-base p-space-xl rounded shadow-md">
+<div class="max-w-xl mb-space-lg">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase tracking-widest font-semibold block mb-1">Material Integrity</span>
+<h3 class="font-headline-md text-headline-md text-ivory-base">Specifications of Distinction</h3>
+<p class="font-body-md text-body-md text-outline-variant">
+            Procured under stringent DHA engineering compliance to guarantee low thermal conductivity and long-term durability in Bahawalpur's regional climate.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md bg-slate-black/50 rounded">
+<span class="material-symbols-outlined text-luxe-gold-light text-2xl mb-2">grid_view</span>
+<h4 class="font-title-md text-title-md font-semibold text-ivory-base mb-1">Porcelain Tile Floors</h4>
+<p class="font-body-sm text-body-sm text-outline-variant">Imported 60x120cm polished matte marble-finish slabs across all living halls.</p>
+</div>
+<div class="p-space-md bg-slate-black/50 rounded">
+<span class="material-symbols-outlined text-luxe-gold-light text-2xl mb-2">water_drop</span>
+<h4 class="font-title-md text-title-md font-semibold text-ivory-base mb-1">Grohe / Kohler Fittings</h4>
+<p class="font-body-sm text-body-sm text-outline-variant">Thermostatic mixer sets, wall-hung concealed cisterns, and brushed gold finish accents.</p>
+</div>
+<div class="p-space-md bg-slate-black/50 rounded">
+<span class="material-symbols-outlined text-luxe-gold-light text-2xl mb-2">window</span>
+<h4 class="font-title-md text-title-md font-semibold text-ivory-base mb-1">Double-Glazed Facades</h4>
+<p class="font-body-sm text-body-sm text-outline-variant">Thermal-break aluminum profiles with low-E glass cutting cooling loads up to 34%.</p>
+</div>
+<div class="p-space-md bg-slate-black/50 rounded">
+<span class="material-symbols-outlined text-luxe-gold-light text-2xl mb-2">door_front</span>
+<h4 class="font-title-md text-title-md font-semibold text-ivory-base mb-1">Ash Wood Joinery</h4>
+<p class="font-body-sm text-body-sm text-outline-variant">Solid core 8-foot entrance doors and engineered acoustic bedroom privacy leaf panels.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Official 3-Year Payment Schedule & Price Structure -->
+<section class="w-full bg-surface-container-lowest py-space-2xl" id="payment-plan">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold block mb-1">Flexible Wealth Allocation</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Official 3-Year Installment Plan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Standard 6 Marla Luxury Villa (2,171 Sq. Ft. Covered Area). Total Valuation: PKR 24.5M – 25.5M (Subject to Corner/Park facing category).
+          </p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded self-start md:self-auto flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary">security_update_good</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Direct DHA Transfer Verification</span>
+</div>
+</div>
+<!-- Schedule Table -->
+<div class="w-full overflow-x-auto bg-surface rounded shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-black text-ivory-base font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-md px-space-lg">Installment Milestone</th>
+<th class="py-space-md px-space-md">Schedule Due Date</th>
+<th class="py-space-md px-space-md">Percentage (%)</th>
+<th class="py-space-md px-space-lg text-right">Standard Villa (PKR)</th>
+<th class="py-space-md px-space-lg text-right">Prime / Park-Facing (PKR)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-charcoal-border font-body-md text-body-md text-on-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Down Payment (Initial Booking)</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">At Application Submission</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">15%</td>
+<td class="py-space-md px-space-lg text-right font-semibold">3,675,000</td>
+<td class="py-space-md px-space-lg text-right font-semibold">3,825,000</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-semibold">Allocation &amp; Confirmation</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Within 45 Days of Booking</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">10%</td>
+<td class="py-space-md px-space-lg text-right">2,450,000</td>
+<td class="py-space-md px-space-lg text-right">2,550,000</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-semibold">12 Equal Quarterly Payments (Q1 - Q12)</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Quarterly Cycles (Year 1 to 3)</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">60% (5% / qtr)</td>
+<td class="py-space-md px-space-lg text-right">1,225,000 / qtr</td>
+<td class="py-space-md px-space-lg text-right">1,275,000 / qtr</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="">Possession &amp; Key Handover</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">At Completion Handover</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">15%</td>
+<td class="py-space-md px-space-lg text-right font-semibold">3,675,000</td>
+<td class="py-space-md px-space-lg text-right font-semibold">3,825,000</td>
+</tr>
+<tr class="bg-surface-container font-title-md text-title-md font-bold">
+<td class="py-space-md px-space-lg" colspan="2">Total Contracted Price</td>
+<td class="py-space-md px-space-md text-secondary">100%</td>
+<td class="py-space-md px-space-lg text-right text-secondary">PKR 24,500,000</td>
+<td class="py-space-md px-space-lg text-right text-secondary">PKR 25,500,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Financial Advisory Note -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md text-body-sm text-body-sm text-on-surface-variant">
+<div class="p-space-md bg-surface-container-low rounded">
+<strong class="text-on-surface block mb-1">Diaspora / Overseas Remittances:</strong>
+          Transfers processed cleanly via Roshan Digital Accounts (RDA) or verified state banking swift channels under official DHA reference.
+        </div>
+<div class="p-space-md bg-surface-container-low rounded">
+<strong class="text-on-surface block mb-1">Biometric Transfer Guarantee:</strong>
+          All transactions are registered directly through DHA Bahawalpur's institutional Sub-Registrar and Biometric desk.
+        </div>
+<div class="p-space-md bg-surface-container-low rounded">
+<strong class="text-on-surface block mb-1">Corner &amp; Main Road Categories:</strong>
+          Prime categories (Park facing, Boulevard, or Corner) carry a nominal 5% to 10% standard DHA differential surcharge.
+        </div>
+</div>
+</div>
+</section>
+<!-- Rasheed Baig Executive VIP Consultation Desk -->
+<section class="w-full bg-dark-surface text-ivory-base py-space-2xl" id="inquiry-section">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Agent Persona & Authority -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<div class="relative rounded overflow-hidden shadow-2xl bg-slate-black"><div class="absolute top-3 left-3 z-20 bg-slate-black/90 backdrop-blur-sm p-1.5 rounded shadow-lg flex items-center gap-2 border border-dark-border/60"><div class="w-7 h-7 rounded overflow-hidden bg-surface-container-lowest flex items-center justify-center"><img src="/assets/images/logo.jpg" alt="Estate Solutions Logo" class="w-full h-full object-contain p-0.5"></div><span class="font-label-sm text-label-sm text-luxe-gold-light uppercase tracking-wider pr-1 font-semibold">Estate Solutions Desk</span></div>
+<img alt="Rasheed Baig, Principal at Estate Solutions DHA Bahawalpur" class="w-full h-auto object-cover max-h-[500px]" src="/assets/images/logo.jpg">
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-black via-slate-black/80 to-transparent p-space-lg">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase tracking-wider block">Principal Portfolio Advisor</span>
+<h3 class="font-headline-md text-headline-md text-ivory-base font-semibold">Rasheed Baig</h3>
+<p class="font-body-sm text-body-sm text-surface-variant mt-1">Lead Partner • Authorized DHA Bahawalpur Agency Desk</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase tracking-wider">Direct Verification Lines</span>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-space-sm p-space-sm rounded bg-slate-black hover:bg-dark-border transition-colors" href="tel:03458530848">
+<span class="material-symbols-outlined text-secondary text-xl">phone_iphone</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant">Primary Mobile / Direct Line</span>
+<span class="font-title-md text-title-md text-ivory-base font-semibold">0345-8530848</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm p-space-sm rounded bg-slate-black hover:bg-dark-border transition-colors" href="tel:03053001401">
+<span class="material-symbols-outlined text-secondary text-xl">call</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant">Alternate Corporate Desk</span>
+<span class="font-title-md text-title-md text-ivory-base font-semibold">0305-3001401</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm p-space-sm rounded bg-slate-black hover:bg-dark-border transition-colors" href="mailto:info@estatesolutionsbwp.com">
+<span class="material-symbols-outlined text-secondary text-xl">mail</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant">Institutional Inquiries</span>
+<span class="font-body-md text-body-md text-ivory-base font-medium">info@estatesolutionsbwp.com</span>
+</div>
+</a>
+</div>
+<a class="mt-space-xs inline-flex items-center justify-center gap-space-xs py-3 px-space-md rounded bg-emerald-600 hover:bg-emerald-700 text-ivory-base font-label-md text-label-md uppercase tracking-wider font-semibold transition-colors" href="https://wa.me/923458530848" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined">chat</span> Open Instant WhatsApp Dossier Desk
+            </a>
+</div>
+</div>
+<!-- Right: Interactive Villa Application & Consultation Form -->
+<div class="lg:col-span-7 bg-slate-black p-space-xl lg:p-space-2xl rounded shadow-2xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs border-b border-dark-border pb-space-md">
+<span class="font-label-sm text-label-sm text-luxe-gold-light uppercase tracking-widest font-semibold">Private Allocation Desk</span>
+<h3 class="font-headline-lg text-headline-lg text-ivory-base font-semibold">Reserve Your Defence Gardenia Villa</h3>
+<p class="font-body-md text-body-md text-outline-variant">
+              Submit your preferred villa orientation and acquisition horizon. Rasheed Baig will personally assemble your sector dossier and verified inventory options.
+            </p>
+</div>
+<form class="flex flex-col gap-space-md" id="gardenia-inquiry-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant" for="client-name">Full Legal Name *</label>
+<input class="w-full bg-dark-surface rounded px-space-md py-2.5 text-ivory-base font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="client-name" placeholder="e.g. Major Tariq Mansoor (Retd)" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant" for="client-phone">Direct Phone / WhatsApp *</label>
+<input class="w-full bg-dark-surface rounded px-space-md py-2.5 text-ivory-base font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="client-phone" placeholder="+92 3XX XXXXXXX" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant" for="client-email">Email Address</label>
+<input class="w-full bg-dark-surface rounded px-space-md py-2.5 text-ivory-base font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="client-email" placeholder="client@domain.com" type="email">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant" for="residency-type">Investor Classification</label>
+<select class="w-full bg-dark-surface rounded px-space-md py-2.5 text-ivory-base font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="residency-type">
+<option value="resident">Resident Pakistani</option>
+<option value="overseas">Overseas Pakistani (UK / UAE / US / EU)</option>
+<option value="commercial">Institutional Portfolio Investor</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Villa Category Preference</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-1">
+<label class="flex items-center gap-space-xs p-space-sm rounded bg-dark-surface cursor-pointer hover:bg-dark-border">
+<input checked="" class="accent-[#C5A059]" name="category" type="radio" value="park-facing">
+<span class="font-body-sm text-body-sm text-ivory-base">Park Facing (78% Serenity)</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded bg-dark-surface cursor-pointer hover:bg-dark-border">
+<input class="accent-[#C5A059]" name="category" type="radio" value="corner">
+<span class="font-body-sm text-body-sm text-ivory-base">Corner Placement</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded bg-dark-surface cursor-pointer hover:bg-dark-border">
+<input class="accent-[#C5A059]" name="category" type="radio" value="standard">
+<span class="font-body-sm text-body-sm text-ivory-base">Standard 6 Marla</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant" for="client-notes">Specific Requests / Inspection Timeline</label>
+<textarea class="w-full bg-dark-surface rounded px-space-md py-2.5 text-ivory-base font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary" id="client-notes" placeholder="Specify if you require virtual video walk-through, biometric authorization details, or customized quarterly schedule..." rows="3"></textarea>
+</div>
+<div class="flex items-start gap-space-xs">
+<input checked="" class="mt-1 accent-[#C5A059]" id="nda-agree" type="checkbox">
+<label class="font-body-sm text-body-sm text-outline-variant" for="nda-agree">
+                Request confidential payment schedule, floor plans, and priority invitation to private site inspection in Sector D with Rasheed Baig.
+              </label>
+</div>
+<button class="w-full py-3.5 px-space-md rounded bg-luxe-gold-light hover:bg-luxe-gold-deep text-slate-black font-label-md text-label-md uppercase tracking-widest font-bold transition-all shadow-xl flex items-center justify-center gap-space-xs mt-2" type="submit">
+<span class="material-symbols-outlined text-xl">send</span>
+              Submit Priority Reservation Request
+            </button>
+<div class="hidden p-space-sm rounded bg-emerald-900/60 text-emerald-200 font-label-sm text-label-sm text-center" id="form-feedback">
+              Request received. Rasheed Baig's executive concierge will contact you via WhatsApp / telephone within 4 business hours.
+            </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Map Context Section -->
+<section class="w-full bg-surface py-space-xl border-t border-charcoal-border/30">
+<div class="max-w-[1400px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold block mb-1">Geographic Context</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Strategic Placement Inside Sector D</h2>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-base">near_me</span>
+<span class="">5 Mins to DHA Main Gate • Direct access to Airport Road link</span>
+</div>
+</div>
+<!-- Static Location View Container -->
+<div class="w-full h-80 rounded shadow-md relative overflow-hidden bg-cover bg-center flex items-end p-space-lg" data-location="Sector D, DHA Bahawalpur, Punjab, Pakistan" style="background-image: url('/assets/images/logo.jpg')">
+<div class="bg-slate-black/90 text-ivory-base p-space-md rounded backdrop-blur-sm max-w-md shadow-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-luxe-gold-light text-lg">pin_drop</span>
+<span class="font-title-md text-title-md font-bold">Sector D Enclave</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-variant">
+            Surrounded by Sector A, B, and the Pelikan commercial masterplan. Defence Gardenia enjoys privileged elevated topography with direct access to DHA Bahawalpur's Central Parkways.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-side Interactive Form Handler Script -->
+<script>
+    (function() {
+      const form = document.getElementById('gardenia-inquiry-form');
+      const feedback = document.getElementById('form-feedback');
+      if (form && feedback) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75');
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-xl">progress_activity</span> Transmitting Dossier Request...';
+          }
+          setTimeout(() => {
+            feedback.classList.remove('hidden');
+            form.reset();
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.classList.remove('opacity-75');
+              submitBtn.innerHTML = '<span class="material-symbols-outlined text-xl">done</span> Inquiry Transmitted';
+            }
+          }, 1000);
+        });
+      }
+    })();
+  </script>
+</div></main>
+<footer class="w-full bg-slate-black text-ivory-base mt-space-2xl pt-space-2xl pb-space-xl border-t border-dark-border">
+  <div class="w-full max-w-[1400px] mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-2xl">
+    <!-- Col 1: Brand & Bio -->
+    <div class="flex flex-col gap-space-md">
+      <div class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-lg p-0.5 bg-gradient-to-br from-luxe-gold-light via-secondary to-luxe-gold-deep shadow-md flex items-center justify-center">
+          <img src="/assets/images/logo.jpg" alt="Estate Solutions Logo" class="w-full h-full object-cover rounded-md">
+        </div>
+        <div>
+          <span class="font-display-xl text-xl font-bold text-ivory-base block">Estate Solutions</span>
+          <span class="text-xs text-luxe-gold-light tracking-widest uppercase">DHA Bahawalpur Real Estate</span>
+        </div>
+      </div>
+      <p class="font-body-sm text-body-sm text-outline-variant leading-relaxed">
+        Premier real estate consultancy and wealth advisory specializing in DHA Bahawalpur premium residential plots, commercial sectors, Takmeel Square, Pelican Mall, and Defence Gardenia Villas.
+      </p>
+      <!-- Social Media Icons (Responsive) -->
+      <div class="flex items-center gap-3 pt-2">
+        <a href="https://wa.me/923458530848" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-dark-surface border border-dark-border hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-outline-variant transition-all">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-full bg-dark-surface border border-dark-border hover:border-luxe-gold-light hover:text-luxe-gold-light flex items-center justify-center text-outline-variant transition-all">
+          <i class="fa-brands fa-facebook-f text-sm"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-dark-surface border border-dark-border hover:border-luxe-gold-light hover:text-luxe-gold-light flex items-center justify-center text-outline-variant transition-all">
+          <i class="fa-brands fa-instagram text-sm"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-dark-surface border border-dark-border hover:border-luxe-gold-light hover:text-luxe-gold-light flex items-center justify-center text-outline-variant transition-all">
+          <i class="fa-brands fa-linkedin-in text-sm"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="w-9 h-9 rounded-full bg-dark-surface border border-dark-border hover:border-red-500 hover:text-red-400 flex items-center justify-center text-outline-variant transition-all">
+          <i class="fa-brands fa-youtube text-sm"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 2: Navigation Links -->
+    <div class="flex flex-col gap-space-sm">
+      <span class="font-label-lg text-label-lg text-luxe-gold-light uppercase tracking-widest font-semibold border-b border-dark-border pb-2">Quick Navigation</span>
+      <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-outline-variant pt-2">
+        <li><a href="/" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> Home Overview</a></li>
+        <li><a href="/projects" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> Flagship Projects</a></li>
+        <li><a href="/buy-sell" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> Buy & Sell Marketplace</a></li>
+        <li><a href="/gallery" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> Visual & Blueprint Gallery</a></li>
+        <li><a href="/about" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> About Estate Solutions</a></li>
+        <li><a href="/services" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-secondary"></i> Real Estate Advisory Services</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Featured Projects -->
+    <div class="flex flex-col gap-space-sm">
+      <span class="font-label-lg text-label-lg text-luxe-gold-light uppercase tracking-widest font-semibold border-b border-dark-border pb-2">Featured Showcases</span>
+      <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-outline-variant pt-2">
+        <li><a href="/takmeel-square" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-building text-xs text-luxe-gold-light"></i> Takmeel Square DHA</a></li>
+        <li><a href="/pelican-mall" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-store text-xs text-luxe-gold-light"></i> Pelican Mall Swiss Int'l</a></li>
+        <li><a href="/defence-gardenia-villas" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-house-chimney text-xs text-luxe-gold-light"></i> Defence Gardenia Villas</a></li>
+        <li><a href="/faq" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-circle-question text-xs text-luxe-gold-light"></i> Investor FAQ</a></li>
+        <li><a href="/privacy-policy" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-shield-halved text-xs text-luxe-gold-light"></i> Privacy Policy & Legal</a></li>
+        <li><a href="/terms" class="hover:text-luxe-gold-light transition-colors flex items-center gap-2"><i class="fa-solid fa-file-contract text-xs text-luxe-gold-light"></i> Terms & DHA Verification</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Executive Contact Info -->
+    <div class="flex flex-col gap-space-sm">
+      <span class="font-label-lg text-label-lg text-luxe-gold-light uppercase tracking-widest font-semibold border-b border-dark-border pb-2">Executive Advisory</span>
+      <div class="flex flex-col gap-3 font-body-sm text-body-sm text-outline-variant pt-2">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-user-tie text-luxe-gold-light mt-1"></i>
+          <div>
+            <span class="text-white font-semibold block">Rasheed Baig</span>
+            <span class="text-xs text-outline-variant">Lead Consultant & CEO</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-location-dot text-luxe-gold-light mt-1"></i>
+          <span>Main Boulevard, Sector A, DHA Bahawalpur, Punjab, Pakistan</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-phone text-luxe-gold-light"></i>
+          <div class="flex flex-col">
+            <a href="tel:03458530848" class="hover:text-white transition-colors">0345-8530848</a>
+            <a href="tel:03053001401" class="hover:text-white transition-colors">0305-3001401</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-envelope text-luxe-gold-light"></i>
+          <a href="mailto:info@estatesolutions.pk" class="hover:text-white transition-colors">info@estatesolutions.pk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright & Disclaimer -->
+  <div class="w-full max-w-[1400px] mx-auto px-margin-mobile lg:px-margin pt-space-lg border-t border-dark-border flex flex-col md:flex-row items-center justify-between gap-space-md text-xs text-outline-variant">
+    <p>© 2026 Estate Solutions. All Rights Reserved. DHA Bahawalpur Authorized Real Estate Consultancy.</p>
+    <div class="flex items-center gap-space-md">
+      <a href="/privacy-policy" class="hover:text-luxe-gold-light transition-colors">Privacy Policy</a>
+      <span>•</span>
+      <a href="/terms" class="hover:text-luxe-gold-light transition-colors">Terms of Service</a>
+      <span>•</span>
+      <a href="/faq" class="hover:text-luxe-gold-light transition-colors">Investor FAQ</a>
+    </div>
+  </div>
+</footer>
+<aside class="fixed bottom-6 right-6 z-50"><a class="flex items-center gap-space-sm pl-space-md pr-space-lg py-space-sm rounded-full bg-slate-black text-ivory-base shadow-2xl hover:bg-dark-surface hover:text-ivory-base transition-all group" href="https://wa.me/923458530848" rel="noopener noreferrer" target="_blank"><span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span><span class="material-symbols-outlined text-luxe-gold-light text-xl">chat</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-luxe-gold-light leading-none">Rasheed Baig</span><span class="font-label-md text-label-md text-ivory-base font-semibold leading-tight">WhatsApp VIP Desk</span></div></a></aside>
+
+
+<!-- Floating WhatsApp Widget (Mobile & Desktop Responsive) -->
+<div id="whatsapp-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 pointer-events-auto">
+  <!-- Quick Callout Tooltip -->
+  <div id="wa-callout" class="hidden sm:flex items-center gap-3 bg-slate-black/95 text-ivory-base px-4 py-2.5 rounded-full border border-luxe-gold-light/40 shadow-2xl backdrop-blur-md text-xs font-semibold animate-bounce">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block pulse-online"></span>
+    <span>Need DHA Bahawalpur Advice? Chat with Rasheed Baig</span>
+    <button onclick="document.getElementById('wa-callout').style.display='none'" class="text-outline-variant hover:text-white ml-1"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- Main Floating WhatsApp Button -->
+  <a href="https://wa.me/923458530848?text=Hello%20Estate%20Solutions,%20I%20am%20interested%20in%20DHA%20Bahawalpur%20properties" target="_blank" rel="noopener" aria-label="Contact on WhatsApp" class="group relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-[0_8px_25px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <!-- Online Badge -->
+    <span class="absolute top-0 right-0 w-4 h-4 bg-emerald-300 border-2 border-white rounded-full"></span>
+  </a>
+</div>
+
+<!-- Mobile Fixed Quick Toolbar (Direct Phone & WhatsApp Bar on Mobile) -->
+<div class="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-slate-black/95 border-t border-dark-border px-4 py-2.5 backdrop-blur-lg flex items-center justify-between gap-2 shadow-2xl">
+  <a href="tel:03458530848" class="flex-1 flex items-center justify-center gap-2 py-2 bg-dark-surface border border-dark-border rounded text-white text-xs font-bold">
+    <i class="fa-solid fa-phone text-luxe-gold-light"></i> Call 0345
+  </a>
+  <a href="tel:03053001401" class="flex-1 flex items-center justify-center gap-2 py-2 bg-dark-surface border border-dark-border rounded text-white text-xs font-bold">
+    <i class="fa-solid fa-phone text-luxe-gold-light"></i> Call 0305
+  </a>
+  <a href="https://wa.me/923458530848?text=Hello%20Estate%20Solutions" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 py-2 bg-emerald-600 rounded text-white text-xs font-bold">
+    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+  </a>
+</div>
+
+<!-- Common Script for Mobile Drawer and Interaction -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  const menuIcon = document.getElementById('menu-icon');
+
+  if (menuBtn && drawer) {
+    menuBtn.addEventListener('click', () => {
+      drawer.classList.toggle('hidden');
+      drawer.classList.toggle('flex');
+      if (menuIcon) {
+        if (drawer.classList.contains('hidden')) {
+          menuIcon.className = 'fa-solid fa-bars text-xl';
+        } else {
+          menuIcon.className = 'fa-solid fa-xmark text-xl';
+        }
+      }
+    });
+  }
+});
+</script>
+
+</body></html>
