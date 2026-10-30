@@ -1,0 +1,7 @@
+node_modules/
+temp_portal/
+temp_assets/
+*.zip
+.DS_Store
+npm-debug.log
+*.log
